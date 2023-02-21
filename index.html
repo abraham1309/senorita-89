@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="MX">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>streaming</title>
+
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/estilos.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+
+<body style="overflow-y: auto; ">
+    <div class="row g-0 div-general-live">
+        <div class="col-12 col-sm-12 col-md-1 col-lg-3 col-xl-3 div-vacio">
+
+        </div>
+
+        <div class="col-12 col-sm-12 col-md-7 col-lg-6 col-xl-6 div-general-video">
+            <div class="div-encabezado">
+                <img src="./images/logotipo.png" alt="" srcset="">
+            </div>
+
+            <div class="div-video">
+                <iframe src="https://player.vimeo.com/video/679260068?h=c61bb0864d&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="StarzPlay Se&amp;ntilde;orita 89 Trailer">
+                </iframe>
+                <script src="https://player.vimeo.com/api/player.js"></script>
+
+                <a href="./html/fin.html" class="finalizar-video">
+                    Finalizar video
+                </a>
+            </div>
+
+            <div class="div-pie">
+                <img src="./images/Starzplay.png" alt="" srcset="">
+            </div>
+        </div>
+
+        <div class="col-12 col-sm-12 col-md-4 col-lg-3 col-xl-3 div-derecho">
+
+
+            <div class="div-reacciones">
+                <div class="div-botones">
+
+                    <button id="like" class="boton-emoji" onclick="obtenerId(this)" data-reaccion="liked">
+                        <img id="like" src="./images/like.png" alt="Like" srcset="">
+                    </button>
+
+                    <div class="div-espacio">
+
+                    </div>
+
+                    <button id="love" class="boton-emoji" onclick="obtenerId(this)" data-reaccion="love">
+                        <img id="imagen" src="./images/love.png" alt="Love">
+                    </button>
+
+                    <div class="div-espacio">
+
+                    </div>
+
+                    <button id="laugh" class="boton-emoji" onclick="obtenerId(this)" data-reaccion="laugh">
+                        <img id="imagen" src="./images/laught.png" alt="" srcset="">
+                    </button>
+
+                    <div class="div-espacio">
+
+                    </div>
+
+                    <button id="surprise" class="boton-emoji" onclick="obtenerId(this)" data-reaccion="surprise">
+                        <img id="imagen" src="./images/sorprise.png" alt="">
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="div-fondo-streaming">
+
+    </div>
+
+
+    <!--col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6-->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+
+
+
+    <script>
+        var botones = document.querySelectorAll(".boton-emoji");
+        let id;
+
+        let img;
+        let imgFinal;
+        var server = "https://lb.pm.gcp.api.ifscore.biz/starz";
+
+
+        function obtenerId(comp) {
+            id = comp.id;
+        }
+
+        function IniciarAnimacion() {
+            var boton = document.getElementById(id);
+            document.getElementById('like').disabled = true;
+            document.getElementById('love').disabled = true;
+            document.getElementById('laugh').disabled = true;
+            document.getElementById('surprise').disabled = true;
+
+            img = boton.childNodes;
+            imgFinal = img[1];
+
+            imgFinal.classList.add("imagen-animacion");
+
+            setTimeout(finalizarAnimacion, 900);
+
+
+        }
+
+        function finalizarAnimacion() {
+            imgFinal.classList.remove("imagen-animacion");
+            document.getElementById('like').disabled = false;
+            document.getElementById('love').disabled = false;
+            document.getElementById('laugh').disabled = false;
+            document.getElementById('surprise').disabled = false;
+        }
+
+
+        botones.forEach(boton => {
+            boton.addEventListener("click", IniciarAnimacion);
+        });
+    </script>
+
+</body>
+
+</html>

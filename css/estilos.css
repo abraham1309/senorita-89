@@ -1,0 +1,1226 @@
+@font-face {
+    font-family: "Gotham Book";
+    src: url("../tipografias/Gotham_Book.ttf");
+}
+
+body {
+    overflow: hidden;
+}
+
+
+/*Estilos para el registro*/
+
+.div-general {
+    position: absolute;
+    width: 100vw;
+    height: auto;
+    margin-top: 1.5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 2;
+}
+
+.div-fondo {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.43);
+    height: 100vh;
+    width: 100vw;
+}
+
+.div-general .div-registro {
+    width: 650px;
+    height: auto;
+}
+
+.div-general .div-registro .formulario {
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.div-general .div-registro .formulario .div-logo {
+    height: auto;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.div-general .div-registro .formulario .div-logo img {
+    width: 85%;
+    margin-bottom: 20%;
+}
+
+.div-general .div-registro .formulario .div-campos {
+    width: 100%;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid rgba(255, 255, 255, 0.63);
+}
+
+.div-general .div-registro .formulario .div-campos .div-input {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.div-general .div-registro .formulario .div-campos .div-input input:focus {
+    outline: none;
+}
+
+.div-general .div-registro .formulario .div-campos .div-input:not(.div-boton) {
+    margin-bottom: 4%;
+}
+
+.div-general .div-registro .formulario .div-campos label {
+    font-family: "Gotham Book";
+    font-size: 17px;
+    width: 30%;
+    color: #fff;
+}
+
+.div-general .div-registro .formulario .div-campos input {
+    width: 45%;
+    height: 25px;
+    padding-left: 3%;
+    background: none;
+    border: 1px solid #dd9f18;
+    font-family: "Gotham Book";
+    color: #fff;
+    -moz-appearance: textfield;
+    -webkit-appearance: textfield;
+}
+
+.div-general .div-registro .formulario .div-campos select {
+    width: 49%;
+    height: 30px;
+    padding-left: 3%;
+    background: none;
+    border: 1px solid #dd9f18;
+    font-family: "Gotham Book";
+    color: #fff;
+    -moz-appearance: textfield;
+    -webkit-appearance: textfield;
+}
+
+.div-general .div-registro .formulario .div-campos select option {
+    font-family: "Gotham Book";
+    color: #fff;
+    font-size: 17px;
+    background-color: #000;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.div-general .div-registro .formulario .div-campos .div-boton button {
+    width: 80%;
+    height: 35px;
+    background: none;
+    border: 1px solid #fff;
+    font-family: "Gotham Book";
+    font-size: 16px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.div-general .div-registro .formulario .div-logo-footer {
+    height: auto;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1%;
+}
+
+.div-general .div-registro .formulario .div-logo-footer .div-fecha {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-direction: column;
+}
+
+.div-general .div-registro .formulario .div-logo-footer .div-fecha p,
+h2 {
+    font-size: 15px;
+    color: #fff;
+    font-family: "Gotham Book";
+}
+
+.div-general .div-registro .formulario .div-logo-footer .div-fecha h2 {
+    margin-top: -16px;
+}
+
+.div-general .div-registro .formulario .div-logo-footer img {
+    width: 45%;
+    margin-left: 2%;
+}
+
+.div-general .div-registro .formulario .div-redes-sociales {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    z-index: -1;
+}
+
+.div-general .div-registro .formulario .div-redes-sociales .div-iconos {
+    width: 100%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+.div-general .div-registro .formulario .div-redes-sociales .div-iconos a {
+    width: 160px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 3%;
+    text-decoration: none;
+    font-size: 35px;
+    color: #fff;
+}
+
+.div-general .div-registro .formulario .div-redes-sociales .div-iconos .i-nombre {
+    font-style: normal;
+    font-family: "Gotham Book";
+    color: #fff;
+    font-size: 18px;
+}
+
+@media (max-width: 500px) {
+    .div-general {
+        margin-top: 5%;
+    }
+    .div-general .div-registro .formulario .div-logo-footer {
+        margin-top: 10%;
+    }
+    .div-general .div-registro .formulario .div-redes-sociales {
+        margin-top: 10vh;
+    }
+    .div-general .div-registro .formulario .div-redes-sociales .div-iconos {
+        justify-content: center;
+    }
+    .div-general .div-registro .formulario .div-redes-sociales .div-iconos a {
+        width: 140px;
+        margin-right: 6%;
+    }
+    .div-general .div-registro .formulario .div-redes-sociales .div-iconos .a-ultimo {
+        margin-right: 0;
+    }
+    .div-general .div-registro {
+        width: 100%;
+    }
+    .div-general .div-registro .formulario .div-campos {
+        border: none;
+    }
+    .div-general .div-registro .formulario .div-campos label {
+        font-size: 15px;
+        width: 30%;
+    }
+    .div-general .div-registro .formulario .div-campos input {
+        width: 50%;
+    }
+    .div-general .div-registro .formulario .div-campos select {
+        width: 54%;
+    }
+    .div-general .div-registro .formulario .div-campos .div-input:not(.div-boton) {
+        margin-bottom: 5%;
+    }
+    .div-general .div-registro .formulario .div-logo-footer img {
+        width: 37%;
+    }
+    .div-general .div-registro .formulario .div-logo-footer .div-fecha p,
+    h2 {
+        font-size: 12px;
+        color: #fff;
+    }
+    .div-general .div-registro .formulario .div-redes-sociales .div-iconos .i-nombre {
+        font-size: 16px;
+    }
+}
+
+
+/*Estilos para la pagina de invitacion*/
+
+.div-general-invi {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+}
+
+.div-general-invi .div-elementos {
+    height: 100%;
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* border: solid 1px #fff;*/
+}
+
+.div-general-invi .div-elementos .div-cabezera {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.div-general-invi .div-elementos .div-cabezera img {
+    width: 58%;
+    margin-bottom: 7%;
+}
+
+.div-general-invi .div-elementos .div-cabezera h1 {
+    color: #fff;
+    font-family: "Gotham Book";
+    font-size: 18px;
+    text-align: center;
+    width: 90%;
+}
+
+.div-general-invi .div-elementos .div-cuerpo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.div-general-invi .div-elementos .div-cuerpo .div-linea {
+    width: 35%;
+    border-bottom: solid 1px #dd9f18;
+}
+
+.div-general-invi .div-elementos .div-cuerpo .linea-arriba {
+    margin-bottom: 5%;
+}
+
+.div-general-invi .div-elementos .div-cuerpo .linea-abajo {
+    margin-top: 2%;
+}
+
+.div-general-invi .div-elementos .div-cuerpo p {
+    color: #fff;
+    font-family: "Gotham Book";
+    font-size: 17px;
+    text-align: center;
+    width: 90%;
+}
+
+.div-general-invi .div-elementos .div-cuerpo a {
+    width: 45%;
+    height: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4%;
+    padding-left: 5%;
+    padding-right: 5%;
+    background: none;
+    border: 1px solid #dd9f18;
+    color: #fff;
+    font-family: "Gotham Book";
+    font-size: 17px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.div-general-invi .div-elementos .div-cuerpo .div-fecha {
+    display: flex;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.div-general-invi .div-elementos .div-cuerpo .div-fecha p {
+    color: #fff;
+    font-family: "Gotham Book";
+}
+
+.div-general-invi .div-elementos .div-cuerpo .div-fecha .lado-izquierdo {
+    font-size: 40px;
+    line-height: 0px;
+}
+
+.div-general-invi .div-elementos .div-cuerpo .div-fecha .lado-derecho {
+    text-align: left;
+}
+
+.div-general-invi .div-elementos .div-pie {
+    text-align: center;
+}
+
+.div-general-invi .div-elementos .div-pie img {
+    width: 60%;
+}
+
+@media (max-width: 450px) {
+    .div-general-invi .div-elementos {
+        width: 100%;
+    }
+    .div-general-invi .div-elementos .div-cabezera h1 {
+        font-size: 16px;
+    }
+    .div-general-invi .div-elementos .div-cuerpo p {
+        font-size: 14px;
+    }
+    .div-general-invi .div-elementos .div-cuerpo a {
+        font-size: 15px;
+    }
+}
+
+
+/*Estilos para la pagina contador*/
+
+.div-general-contador {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.div-general-contador .div-elementos {
+    height: 100vh;
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.div-general-contador .div-elementos .div-encabezado {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.div-general-contador .div-elementos .div-encabezado img {
+    width: 65%;
+    margin-bottom: 15%;
+}
+
+.div-general-contador .div-elementos .div-contador {
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.div-general-contador .div-elementos .div-contador p {
+    font-family: "Gotham Book";
+    font-size: 23px;
+}
+
+.div-general-contador .div-elementos .div-contador .div-tiempo {
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15%;
+    border: solid 3px #dd9f18;
+}
+
+.div-general-contador .div-elementos .div-contador .div-tiempo .div-indicador {
+    width: 120px;
+    height: 110px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.div-general-contador .div-elementos .div-contador .div-tiempo .simply-minutes-section {
+    height: 70%;
+    border-right: solid 2px #dd9f18;
+}
+
+.div-general-contador .div-elementos .div-contador .div-tiempo .simply-hours-section {
+    height: 70%;
+    border-right: solid 2px #dd9f18;
+    border-left: solid 2px #dd9f18;
+}
+
+.div-general-contador .div-elementos .div-contador .div-tiempo .div-indicador .p-numero {
+    display: block;
+}
+
+.div-general-contador .div-elementos .div-contador .div-tiempo span {
+    font-family: "Gotham Book";
+    font-size: 50px;
+    text-align: center;
+}
+
+.div-general-contador .div-elementos .div-contador .div-tiempo .p-letra {
+    font-size: 17px;
+}
+
+.div-general-contador .div-elementos .div-contador .div-tiempo .div-linea {
+    height: 70%;
+}
+
+.div-general-contador .div-elementos .div-pie-conta {
+    text-align: center;
+}
+
+.div-general-contador .div-elementos .div-pie-conta img {
+    margin-top: 12%;
+    width: 50%;
+}
+
+.div-general-contador .div-elementos .div-redes-sociales {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    z-index: -1;
+}
+
+.div-general-contador .div-elementos .div-redes-sociales .div-iconos {
+    width: 100%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    margin-bottom: 2%;
+}
+
+.div-general-contador .div-elementos .div-redes-sociales .div-iconos a {
+    width: 160px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 3%;
+    text-decoration: none;
+    font-size: 35px;
+    color: #000;
+}
+
+.div-general-contador .div-elementos .div-redes-sociales .div-iconos .i-nombre {
+    font-style: normal;
+    font-family: "Gotham Book";
+    color: #000;
+    font-size: 18px;
+}
+
+.div-fondo-contador {
+    position: absolute;
+    background: url(../images/fondo_contador.png);
+    height: 100vh;
+    width: 100vw;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    z-index: -1;
+}
+
+@media (max-width: 850px) {
+    .div-general-contador .div-elementos .div-redes-sociales {
+        width: auto;
+        height: auto;
+        position: relative;
+        display: block;
+        margin-top: 20%;
+    }
+    .div-general-contador .div-elementos .div-redes-sociales .div-iconos {
+        width: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 0;
+    }
+    .div-general-contador .div-elementos .div-redes-sociales .div-iconos a {
+        margin-right: 0;
+    }
+    .div-general-contador .div-elementos .div-redes-sociales .div-iconos .a-ultimo {
+        margin-left: 6%;
+    }
+}
+
+@media (max-width: 550px) {
+    .div-general-contador .div-elementos .div-contador {
+        width: 90%;
+    }
+    .div-general-contador .div-elementos .div-contador .div-tiempo .div-indicador {
+        width: 90px;
+        height: 80px;
+    }
+    .div-general-contador .div-elementos .div-contador .div-tiempo .div-indicador .p-numero {
+        font-size: 35px;
+    }
+    .div-general-contador .div-elementos .div-contador .div-tiempo .p-letra {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 400px) {
+    .div-general-contador .div-elementos .div-contador .div-tiempo .div-indicador {
+        width: 75px;
+        height: 65px;
+    }
+    .div-general-contador .div-elementos .div-contador .div-tiempo .div-indicador .p-numero {
+        font-size: 30px;
+    }
+    .div-general-contador .div-elementos .div-contador .div-tiempo .p-letra {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 350px) {
+    .div-general-contador .div-elementos .div-contador .div-tiempo .div-indicador {
+        width: 65px;
+        height: 55px;
+    }
+    .div-general-contador .div-elementos .div-contador .div-tiempo .div-indicador .p-numero {
+        font-size: 25px;
+    }
+    .div-general-contador .div-elementos .div-contador .div-tiempo .p-letra {
+        font-size: 10px;
+    }
+    .div-general-contador .div-elementos .div-redes-sociales .div-iconos a {
+        width: 140px;
+        font-size: 26px;
+    }
+    .div-general-contador .div-elementos .div-redes-sociales .div-iconos .i-nombre {
+        font-size: 13px;
+    }
+    .div-general-contador .div-elementos .div-redes-sociales .div-iconos .a-ultimo {
+        margin-left: 1%;
+    }
+}
+
+
+/*Estilos para la pagina web de calendario*/
+
+.div-general-calendario {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1;
+}
+
+.div-general-calendario .senorita89 {
+    width: 250px;
+    margin-top: -5%;
+    margin-bottom: 3%;
+}
+
+.div-general-calendario .div-texto {
+    width: 650px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid #dd9f18;
+}
+
+.div-general-calendario .div-texto p {
+    width: 80%;
+    font-family: "Gotham Book";
+    font-size: 18px;
+    color: #fff;
+    text-align: center;
+}
+
+.div-general-calendario .div-texto p i {
+    color: #dd9f18;
+}
+
+.div-general-calendario .starzplay {
+    width: 150px;
+    margin-top: 3%;
+}
+
+.div-general-calendario .div-pie {
+    position: absolute;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80vh;
+}
+
+.div-general-calendario .div-pie .div-redes-sociales {
+    width: auto;
+}
+
+.div-general-calendario .div-pie .div-redes-sociales .div-iconos {
+    width: 100%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+.div-general-calendario .div-pie .div-redes-sociales .div-iconos a {
+    width: 160px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 3%;
+    text-decoration: none;
+    font-size: 35px;
+    color: #fff;
+}
+
+.div-general-calendario .div-pie .div-redes-sociales .div-iconos .i-nombre {
+    font-style: normal;
+    font-family: "Gotham Book";
+    color: #fff;
+    font-size: 18px;
+}
+
+.div-general-calendario .div-pie .div-vacio {
+    width: 38%;
+    height: 50px;
+}
+
+.div-general-calendario .div-pie button {
+    height: 40px;
+    width: 370px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.div-general-calendario .div-pie button i {
+    font-size: 20px;
+    padding-top: 5%;
+    margin-right: 5%;
+    width: 40px;
+    height: 30px;
+    background-color: #fff;
+    color: #000;
+}
+
+.div-general-calendario .div-pie button p {
+    font-family: "Gotham Book";
+    font-size: 18px;
+    color: #fff;
+}
+
+.div-fondo-calendario {
+    position: absolute;
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/fondo-registro.png);
+    height: 100vh;
+    width: 100vw;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    z-index: -1;
+}
+
+@media (max-width: 1140px) {
+    .div-general-calendario .div-pie .div-vacio {
+        width: 27%;
+    }
+}
+
+@media (max-width: 950px) {
+    .div-general-calendario .div-pie .div-vacio {
+        width: 10%;
+    }
+}
+
+@media (max-width: 700px) {
+    .div-general-calendario .senorita89 {
+        width: 250px;
+        margin-top: -5%;
+        margin-bottom: 11%;
+    }
+    .div-general-calendario .div-texto {
+        width: 90%;
+        height: auto;
+        padding-top: 5%;
+        padding-bottom: 5%;
+    }
+    .div-general-calendario .div-texto p {
+        font-size: 15px;
+    }
+    .div-general-calendario .starzplay {
+        width: 150px;
+        margin-top: 5%;
+    }
+    .div-general-calendario .div-pie {
+        position: relative;
+        margin-top: 10%;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 400px) {
+    .div-general-calendario .senorita89 {
+        width: 225px;
+    }
+    .div-general-calendario .div-pie button {
+        width: 300px;
+    }
+    .div-general-calendario .div-pie button i {
+        font-size: 20px;
+        width: 35px;
+        height: 27px;
+        padding-top: 5%;
+    }
+    .div-general-calendario .div-pie button p {
+        font-family: "Gotham Book";
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 350px) {
+    .div-general-calendario .div-pie .div-redes-sociales .div-iconos a {
+        width: 135px;
+        font-size: 25px;
+    }
+    .div-general-calendario .div-pie .div-redes-sociales .div-iconos .i-nombre {
+        font-size: 10px;
+    }
+    .div-general-calendario .div-pie button {
+        width: 235px;
+    }
+    .div-general-calendario .div-pie button i {
+        font-size: 18px;
+        width: 30px;
+        height: 30px;
+    }
+    .div-general-calendario .div-pie button p {
+        font-family: "Gotham Book";
+        font-size: 13px;
+    }
+}
+
+
+/*Estilos para la pagina del streamingss*/
+
+.div-general-live {
+    position: absolute;
+}
+
+.div-general-live .div-vacio {
+    height: 100vh;
+}
+
+.div-general-live .div-general-video {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.div-general-live .div-general-video .div-encabezado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.div-general-live .div-general-video .div-encabezado img {
+    width: 40%;
+}
+
+.div-general-live .div-general-video .div-video {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 8%;
+    margin-top: 4%;
+}
+
+.div-general-live .div-general-video .div-video iframe {
+    position: relative;
+    width: 90%;
+    height: 340px;
+    padding: 2% 2% 2% 2%;
+    border: 2px solid #dd9f18;
+}
+
+.div-general-live .div-general-video .div-pie {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.div-general-live .div-general-video .div-pie img {
+    width: 60%;
+}
+
+.div-general-live .div-derecho {
+    height: 100vh;
+}
+
+.div-general-live .div-derecho .div-informacion {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 60%;
+}
+
+.div-general-live .div-derecho .div-informacion .div-usuario {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.div-general-live .div-derecho .div-informacion .div-usuario .div-circulo {
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+    margin-top: 5%;
+    background-color: #e93461;
+}
+
+.div-general-live .div-derecho .div-informacion .div-usuario p {
+    line-height: 0px;
+    margin-top: 20%;
+    font-family: "Gotham Book";
+    font-size: 18px;
+    color: #fff;
+}
+
+.div-general-live .div-derecho .div-informacion .div-usuario .div-medio-circulo {
+    width: 15%;
+}
+
+.div-general-live .div-derecho .div-informacion .div-enmedio {
+    width: 13%;
+}
+
+.div-general-live .div-derecho .div-espetadores {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.div-general-live .div-derecho .div-espetadores .div-izquierdo {
+    width: 80px;
+    height: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    background-color: #e93461;
+    color: #fff;
+}
+
+.div-general-live .div-derecho .div-espetadores .div-izquierdo p {
+    margin-bottom: 2%;
+    font-family: "Gotham Book";
+    font-size: 18px;
+    color: #fff;
+}
+
+.div-general-live .div-derecho .div-espetadores .div-numero {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.div-general-live .div-derecho .div-espetadores .div-numero p {
+    margin-bottom: 2%;
+    font-size: 18px;
+    font-family: "Gotham Book";
+    color: #fff;
+}
+
+.div-general-live .div-derecho .div-reacciones {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.div-general-live .div-derecho .div-reacciones .div-botones {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 9%;
+}
+
+.div-general-live .div-derecho .div-reacciones .boton-emoji {
+    width: 18%;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    border: none;
+    font-size: 22px;
+    background-color: rgba(53, 53, 53, 0.664);
+}
+
+.div-general-live .div-derecho .div-reacciones .boton-emoji img {
+    width: 65%;
+}
+
+.div-general-live .div-derecho .div-reacciones .boton-emoji .imagen-animacion {
+    animation: animacionBoton 0.3s ease-in-out;
+}
+
+.div-general-live .div-derecho .div-reacciones .div-espacio {
+    width: 5%;
+}
+
+.div-general-live .div-video .finalizar-video {
+    margin-top: 3%;
+    margin-bottom: -5%;
+    padding: 1% 30% 1% 30%;
+    border: 2px solid #fff;
+    text-decoration: none;
+    color: #fff;
+    font-family: "Gotham Book";
+}
+
+.div-fondo-streaming {
+    position: absolute;
+    background: url(../images/Fondo_streaming.png);
+    height: 100vh;
+    width: 100vw;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    z-index: -1;
+}
+
+@media (max-width: 767px) {
+    .div-fondo-streaming {
+        height: 110vh;
+    }
+    .div-general-live .div-vacio {
+        display: none;
+    }
+    .div-general-live .div-general-video {
+        padding-top: 3%;
+        height: 90vh;
+    }
+    .div-general-live .div-general-video .div-encabezado img {
+        width: 30%;
+    }
+    .div-general-live .div-general-video .div-video {
+        margin-bottom: 0;
+        margin-top: 3%;
+    }
+    .div-general-live .div-general-video .div-video iframe {
+        width: 80%;
+    }
+    .div-general-live .div-derecho {
+        position: absolute;
+        height: auto;
+        width: 100%;
+        margin-top: 98vh;
+    }
+    .div-general-live .div-general-video .div-pie {
+        margin-top: 3%;
+    }
+    .div-general-live .div-derecho .div-reacciones {
+        align-items: center;
+        height: 100%;
+    }
+    .div-general-live .div-derecho .div-reacciones .div-botones {
+        margin-bottom: 0;
+    }
+    .div-general-live .div-derecho .div-reacciones .div-botones .boton-emoji {
+        width: 60px;
+    }
+}
+
+@media (max-width: 500px) {
+    .div-fondo-streaming {
+        height: 100vh;
+    }
+    .div-general-live .div-general-video .div-encabezado img {
+        width: 45%;
+    }
+    .div-general-live .div-general-video {
+        padding-top: 3%;
+        height: 80vh;
+    }
+    .div-general-live .div-general-video .div-video iframe {
+        width: 80%;
+        height: auto;
+    }
+    .div-general-live .div-derecho {
+        position: absolute;
+        height: auto;
+        width: 100%;
+        margin-top: 65vh;
+    }
+    .div-general-live .div-general-video .div-pie {
+        margin-top: 6%;
+    }
+    .div-general-live .div-general-video .div-pie img {
+        width: 35%;
+    }
+    .div-general-live .div-derecho .div-reacciones .div-botones .boton-emoji {
+        width: 70px;
+    }
+    .div-general-live .div-derecho .div-reacciones .boton-emoji img {
+        width: 55%;
+    }
+    .div-general-live .div-video .finalizar-video {
+        margin-top: 5%;
+        margin-bottom: 1%;
+        padding: 1% 20% 1% 20%;
+    }
+}
+
+@keyframes animacionBoton {
+    0% {
+        width: 5%;
+    }
+    100% {
+        width: 65%;
+    }
+}
+
+
+/*Estilos para la pagina de agradecimiento*/
+
+.div-general .div-registro .div-logo {
+    height: auto;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.div-general .div-registro .div-logo img {
+    width: 50%;
+    margin-bottom: 20%;
+}
+
+.div-general .div-registro .div-logo-footer {
+    height: auto;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10%;
+}
+
+.div-general .div-registro .div-logo-footer img {
+    width: 30%;
+}
+
+.div-general .div-registro .div-texto {
+    text-align: center;
+}
+
+.div-general .div-registro .div-texto p {
+    font-size: 25px;
+    font-family: "Gotham Book";
+    color: #fff;
+}
+
+.div-general .div-registro .div-redes-sociales {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -1;
+}
+
+.div-general .div-registro .div-redes-sociales .div-iconos {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.div-general .div-registro .div-redes-sociales .div-iconos a {
+    width: 160px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 3%;
+    text-decoration: none;
+    font-size: 35px;
+    color: #fff;
+}
+
+.div-general .div-registro .div-redes-sociales .div-iconos .i-nombre {
+    font-style: normal;
+    font-family: "Gotham Book";
+    color: #fff;
+    font-size: 18px;
+}
+
+@media (max-width: 500px) {
+    .div-general {
+        margin-top: 5%;
+    }
+    .div-general .div-registro .div-logo img {
+        width: 80%;
+    }
+    .div-general .div-registro .div-logo-footer {
+        margin-top: 10%;
+    }
+    .div-general .div-registro .div-redes-sociales {
+        margin-top: 15vh;
+    }
+    .div-general .div-registro .div-redes-sociales .div-iconos {
+        justify-content: center;
+    }
+    .div-general .div-registro .div-redes-sociales .div-iconos a {
+        width: 140px;
+        margin-right: 6%;
+    }
+    .div-general .div-registro .div-redes-sociales .div-iconos .a-ultimo {
+        margin-right: 0;
+    }
+    .div-general .div-registro2 {
+        width: 80%;
+    }
+    .div-general .div-registro .div-logo-footer img {
+        width: 40%;
+    }
+    .div-general .div-registro .div-redes-sociales .div-iconos .i-nombre {
+        font-size: 16px;
+    }
+}
